@@ -36,14 +36,24 @@
 
 ---
 
+## 👤 내 역할 및 기여
+
+이 프로젝트에서 저는 **통신 품질을 기반으로 중계 로봇이 이동하도록 하는 핵심 로직의 설계 및 구현**을 담당했습니다.
+
+- TQ/RSSI를 최적화 목표로 사용하는 **연결 인식 내비게이션 알고리즘을 설계 및 구현**
+- BATMAN-ADV 메시 네트워크 메트릭을 ROS 2 제어 루프에 연동
+- SLAM 또는 Nav2에 의존하지 않는 자율 릴레이 재배치 로직 개발
+- RSSI/TQ 노이즈로 인한 불안정한 움직임을 분석하고 제어 파라미터 조정
+- 리눅스 네트워킹과 ROS 2 기반 로봇 제어 간의 연동 및 시스템 통합에 기여
+
 ## 🧠 디자인 근거(Design Rationale)
 
-- Why BATMAN-ADV?
+- Why I Chose BATMAN-ADV?
   - 자가 치유 기능을 갖춘 L2 메시 라우팅
   - 노드 이동성 및 인프라 장애에 강인함
   - 재난 및 임시 네트워크에 적합
 
-- Why Gradient-based Navigation?
+- Why I Used Gradient-based Navigation Instead of Nav2/SLAM?
   - 위치 정확성이 아닌 커뮤니케이션 품질이 주요 목표
   - 사전 지도나 위치 확인이 필요 없음
   - 불안정한 환경에 적합한 가볍고 반응형 제어
@@ -152,17 +162,6 @@ ros2 run robot_Qt gui_dashboard
 
 ---
 
-## 👥 개발팀 소개 (Team Members)
-
-| 역할 | 이름 | 담당 업무 | GitHub |
-| --- | --- | --- | --- |
-| **팀장** | **김성준** | 프로젝트 총괄, ROS2 자율 주행 알고리즘 구현 | [@seolihan651jw](https://github.com/seolihan651) |
-| **팀원** | **김영교** | Batman-adv Mesh 네트워크 구축 및 커널 모듈 최적화 | [@mmc47047](https://github.com/mmc47047) |
-| **팀원** | **윤찬민** | Qt GUI 대시보드 개발, 시스템 통합 테스트 | [@CMYMC](https://github.com/CMYMC) |
-| **팀원** | **정찬영** | ROS2 센서 데이터 처리 및 하드웨어 제어 | [@salnock](https://github.com/salnock) |
-
----
-
 ## ⚠️ 제한 사항 및 향후 작업
 
 - RSSI/TQ 변동으로 인해 릴레이 움직임에 국부적인 진동이 발생할 수 있습니다
@@ -171,12 +170,23 @@ ros2 run robot_Qt gui_dashboard
 
 ---
 
-## 🧠 기술적 시사점(Technical Takeaways)
+## 🧠 What I Learned
 
 - 배트맨-ADV를 사용하여 레이어 2 메시 네트워크를 구현하고 기존 IP 라우팅과의 차이점을 이해
 - SLAM이나 Nav2에 의존하지 않고 연결성을 인식하는 내비게이션 알고리즘을 설계
 - 실제 환경에서 RSSI/TQ 노이즈와 반응 제어의 실용적인 도전 과제 학습
 - ROS 2, 리눅스 네트워킹 및 임베디드 시스템을 단일 자율 시스템에 통합
+
+---
+
+## 👥 개발팀 소개 (Team Members)
+
+| 역할 | 이름 | 담당 업무 | GitHub |
+| --- | --- | --- | --- |
+| **팀장** | **김성준** | 프로젝트 총괄, ROS2 자율 주행 알고리즘 구현 | [@seolihan651jw](https://github.com/seolihan651) |
+| **팀원** | **김영교** | Batman-adv Mesh 네트워크 구축 및 커널 모듈 최적화 | [@mmc47047](https://github.com/mmc47047) |
+| **팀원** | **윤찬민** | Qt GUI 대시보드 개발, 시스템 통합 테스트 | [@CMYMC](https://github.com/CMYMC) |
+| **팀원** | **정찬영** | ROS2 센서 데이터 처리 및 하드웨어 제어 | [@salnock](https://github.com/salnock) |
 
 ---
 
