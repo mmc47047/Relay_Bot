@@ -63,8 +63,8 @@
 ---
 
 📸 Qt Dashboard Screenshot
-![Qt Dashboard](assets/qt_dashboard1.png)
-![Qt Dashboard](assets/qt_dashboard2.png)
+![Qt Dashboard](docs/qt_dashboard1.jpg)
+![Qt Dashboard](docs/qt_dashboard2.jpg.jpg)
 
 > Qt 기반 관제 대시보드 – 메시 네트워크(TQ) 및 시스템 동작을 실시간 시각화
 
@@ -142,8 +142,8 @@ Intel-4th-Project
 
 ### 📷 Experimental Setup (Mobile Relay Robot)
 
-![Relay Robot](assets/relay_robot1.jpg)
-![Relay Robot](assets/relay_robot2.jpg)
+![Relay Robot](docs/relay_robot1.jpg)
+![Relay Robot](docs/relay_robot2.jpg)
 
 
 > TurtleBot3 기반 이동형 메시 중계 로봇 실험 구성  
