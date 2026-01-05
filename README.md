@@ -6,6 +6,11 @@
 > NLOS 및 재난 환경에서 고장난 통신 링크를 자율적으로 복구하는  
 > 모바일 중계 로봇 시스템입니다.
 
+## 🔗 Quick Links
+- 🎥 Demo GIFs: [Without Relay](docs/1.gif) | [With Relay](docs/2.gif)
+- 🧩 System Architecture: [Jump](#-시스템-아키텍처-system-architecture)
+- 🚀 Run: [Jump](#-설치-및-실행-installation--usage)
+
 ### 통신 음영 지역(NLOS) 극복을 위한 자율 이동형 메시 중계 시스템
 
 > **Intel Edge AI SW Academy 8th Gen - Team 4 Project** > **개발 기간:** 2025.11.21 ~ 2026.1.5
@@ -63,7 +68,7 @@
 ---
 
 📸 Qt Dashboard Screenshot
-![Qt Dashboard](docs/qt_dashboard1.jpg)
+
 ![Qt Dashboard](docs/qt_dashboard2.jpg.jpg)
 
 > Qt 기반 관제 대시보드 – 메시 네트워크(TQ) 및 시스템 동작을 실시간 시각화
@@ -138,16 +143,22 @@ Intel-4th-Project
 
 ![Extension Demo](docs/2.gif)
 
+## ✅ Results (Impact)
+- TQ/RSSI를 기반으로 릴레이 로봇을 재배치하여 NLOS 코너 시나리오에서 **링크 복구**를 시연했습니다.
+- 직접 통신(중계 없이)에 비해 **안정적인 비디오 스트리밍**을 유지합니다.
+
 ---
 
 ### 📷 Experimental Setup (Mobile Relay Robot)
 
-![Relay Robot](docs/relay_bot.jpg)
-![Relay Robot](docs/relay_bot2.jpg)
+위 데모는 실제 복도/코너 환경에서 촬영했으며, 아래는 실험에 사용한 TurtleBot3 기반 중계 로봇 구성입니다.
 
+
+![Relay Robot](docs/relay_bot.jpg)
 
 > TurtleBot3 기반 이동형 메시 중계 로봇 실험 구성  
 > BATMAN-ADV 메시 네트워크를 통해 물리적으로 통신 경로를 재구성
+
 
 ## 🚀 설치 및 실행 (Installation & Usage)
 
@@ -162,7 +173,7 @@ Intel-4th-Project
 ```bash
 # 1. 워크스페이스 이동 및 클론
 cd ~/turtlebot3_ws/src/
-git clone https://github.com/seolihan651/Intel-4th-Project.git
+git clone https://github.com/mmc47047/Relay_Bot.git
 
 # 2. 의존성 설치 및 빌드
 cd ~/turtlebot3_ws
@@ -179,6 +190,20 @@ ros2 launch relay_bot_pkg relay_system.launch.py
 ros2 run robot_Qt gui_dashboard
 
 ```
+
+### ✅ Verification (Expected Status)
+
+[Mesh interface]
+ip -4 addr show bat0
+sudo batctl o
+
+[ROS 2 topics]
+ros2 topic list | grep -E "tq|rssi|cmd_vel"
+ros2 topic echo /cmd_vel
+
+[Expected behavior]
+- TQ/RSSI가 감소하면 중계 로봇이 이동을 시작함
+- 중계 로봇이 위치를 잡으면 TQ가 회복되고 통신이 안정화됨
 
 ---
 
@@ -212,4 +237,4 @@ ros2 run robot_Qt gui_dashboard
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
