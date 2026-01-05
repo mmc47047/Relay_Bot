@@ -142,8 +142,8 @@ Intel-4th-Project
 
 ### 📷 Experimental Setup (Mobile Relay Robot)
 
-![Relay Robot](docs/relay_robot1.jpg)
-![Relay Robot](docs/relay_robot2.jpg)
+![Relay Robot](docs/relay_bot.jpg)
+![Relay Robot](docs/relay_bot2.jpg)
 
 
 > TurtleBot3 기반 이동형 메시 중계 로봇 실험 구성  
