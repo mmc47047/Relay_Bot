@@ -195,14 +195,16 @@ ros2 run robot_Qt gui_dashboard
 
 **Mesh interface**
 
-```bash
+```
+bash
 ip -4 addr show bat0
 sudo batctl o
 ```
 
 **ROS 2 topics**
 
-```ros2 topic list | grep -E "tq|rssi|cmd_vel"
+```
+ros2 topic list | grep -E "tq|rssi|cmd_vel"
 ros2 topic echo /cmd_vel
 ```
 
