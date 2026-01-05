@@ -193,17 +193,23 @@ ros2 run robot_Qt gui_dashboard
 
 ### ✅ Verification (Expected Status)
 
-[Mesh interface]
+**Mesh interface**
+
+```bash
 ip -4 addr show bat0
 sudo batctl o
+```
 
-[ROS 2 topics]
-ros2 topic list | grep -E "tq|rssi|cmd_vel"
+**ROS 2 topics**
+
+```ros2 topic list | grep -E "tq|rssi|cmd_vel"
 ros2 topic echo /cmd_vel
+```
 
-[Expected behavior]
-- TQ/RSSI가 감소하면 중계 로봇이 이동을 시작함
-- 중계 로봇이 위치를 잡으면 TQ가 회복되고 통신이 안정화됨
+**Expected behavior**
+
+> TQ/RSSI가 감소하면 중계 로봇이 이동을 시작함
+> 중계 로봇이 위치를 잡으면 TQ가 회복되고 통신이 안정화됨
 
 ---
 
