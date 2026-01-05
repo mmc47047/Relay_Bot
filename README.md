@@ -46,6 +46,8 @@
 - RSSI/TQ 노이즈로 인한 불안정한 움직임을 분석하고 제어 파라미터 조정
 - 리눅스 네트워킹과 ROS 2 기반 로봇 제어 간의 연동 및 시스템 통합에 기여
 
+  
+
 ## 🧠 디자인 근거(Design Rationale)
 
 - Why I Chose BATMAN-ADV?
@@ -58,6 +60,13 @@
   - 사전 지도나 위치 확인이 필요 없음
   - 불안정한 환경에 적합한 가볍고 반응형 제어
 
+---
+
+📸 Qt Dashboard Screenshot
+![Qt Dashboard](assets/qt_dashboard1.png)
+![Qt Dashboard](assets/qt_dashboard2.png)
+
+> Qt 기반 관제 대시보드 – 메시 네트워크(TQ) 및 시스템 동작을 실시간 시각화
 
 ---
 
@@ -128,6 +137,17 @@ Intel-4th-Project
 > With Mobile Relay
 
 ![Extension Demo](docs/2.gif)
+
+---
+
+### 📷 Experimental Setup (Mobile Relay Robot)
+
+![Relay Robot](assets/relay_robot1.jpg)
+![Relay Robot](assets/relay_robot2.jpg)
+
+
+> TurtleBot3 기반 이동형 메시 중계 로봇 실험 구성  
+> BATMAN-ADV 메시 네트워크를 통해 물리적으로 통신 경로를 재구성
 
 ## 🚀 설치 및 실행 (Installation & Usage)
 
