@@ -210,8 +210,9 @@ ros2 topic echo /cmd_vel
 
 **Expected behavior**
 
-> TQ/RSSI가 감소하면 중계 로봇이 이동을 시작함
-> 중계 로봇이 위치를 잡으면 TQ가 회복되고 통신이 안정화됨
+- TQ/RSSI가 감소하면 중계 로봇이 이동을 시작함
+  
+- 중계 로봇이 위치를 잡으면 TQ가 회복되고 통신이 안정화됨
 
 ---
 
